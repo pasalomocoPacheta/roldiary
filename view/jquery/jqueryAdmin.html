@@ -1,0 +1,37 @@
+<script>   
+   
+//   CÓDIGO IR HACIA ARRIBA 
+    var navigationFn = {
+     goToSection: function(id) {
+         $('html, body').animate({
+             scrollTop: $(id).offset().top -$("#header").height() - 10 + 'px'
+         }, 0);
+     }
+ }
+ 
+     // CÓDIGO PARA SACAR MENÚ AÑADIR SESIONES DE JUEGO
+ $(document).ready(function(){
+ 
+     $("#controladorPersonajes").on( "click", function() {
+ 
+     navigationFn.goToSection('#mostrandoPersonajes');
+ 
+     });
+             
+     $("#controladorAnecdotas").on( "click", function() {
+ 
+         navigationFn.goToSection('#mostrandoAnecdotasTodosJugadores');
+    
+    });
+
+    $("#controladorJugadores").on( "click", function() {
+ 
+    navigationFn.goToSection('#mostrandoJugadores');
+
+    });
+    
+ 
+ 
+   });
+ 
+ </script>

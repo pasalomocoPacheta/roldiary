@@ -1,0 +1,87 @@
+/* Cajon de los formularios  */
+
+.cajon{
+    border: 1px solid  #bcb8b1;
+    box-sizing: border-box;
+    padding: 2%;    
+    box-shadow: 0 20px 20px rgb(90 90 90 / 75%);
+    width: 51vh;
+    margin: auto;
+    color: white;
+    background-color: #343a40!important;
+    }
+
+.login-form{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    }
+    
+.login-form .row{
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+.my-form{
+padding-top: 1.5rem;
+padding-bottom: 1.5rem;
+}
+
+.my-form .row{
+margin-left: 0;
+margin-right: 0;
+}
+
+#buttom-submit{
+    background-color: #bcb8b1;
+    color: white;
+    cursor: pointer;
+}
+
+#buttom-submit-registro{
+    background-color: #bcb8b1;
+    color: white;
+    cursor: pointer;
+}
+
+/* 
+ESTE COLOR DE FORMULARIO SE PUEDE QUEDAR PARA LA VERSIÓN EN BLANCO DE LA WEB
+SI ME DA TIEMPO A HACERLA
+ border: 1px solid red;
+  background: #f9f9f9;
+    -webkit-filter: blur(0px) !important;
+    -moz-filter: blur(0px) !important;
+    filter: blur(0px) !important; 
+*/
+
+.formularioEditarBorrar{
+    z-index: 1;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 600px;
+    border-radius:5px;  
+    -webkit-filter: blur(0px) !important;
+    -moz-filter: blur(0px) !important;
+    filter: blur(0px) !important; 
+}
+
+/* Altura de los formularios para borrar seguro   */
+
+.alturaBorrarSeguro a{
+    margin-top: 20px;
+    padding: 3%;
+    height: 35vh;
+}
+
+.alturaBorrarSeguro p{
+   
+    color: white !important;
+}
+
+.papeleraBorrarSeguro{
+    font-size: 100px;
+    color: red !important;
+}

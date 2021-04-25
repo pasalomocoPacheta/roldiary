@@ -1,0 +1,25 @@
+<script>   
+    // CÓDIGO PARA SACAR MENÚ AÑADIR SESIONES DE JUEGO
+        $(document).ready(function(){
+
+            if($(".formularioEditarBorrar").css('display') === "block")  {
+                $('html, body').animate({scrollTop: $("#titulo").offset().top}, 0);
+                // window.location.hash = '#formularioEliminarJugadorDefinitivamente';
+                $("#wrap").css("-webkit-filter", "blur(3px)");
+                $("#titulo").css("-webkit-filter", "blur(3px)");
+
+                $("#wrap").on( "click", function() {
+                    $("#wrap").css("-webkit-filter", "blur(0px)");
+                    $(".formularioEditarBorrar").toggle();
+                    // AQUÍ HAY QUE REDIRIGIR A LA VISTA CORRESPONDIENTE PARA QUE SE RECARGUE LA PÁGINA
+                    // document.location = "index.php";
+                    // https://stackoverflow.com/questions/7241851/how-do-i-reload-the-page-without-the-query-parameters
+                    window.location = window.location.href.split("?")[0];
+                });
+
+            }
+         
+  });
+
+</script>
+

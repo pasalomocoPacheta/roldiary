@@ -1,0 +1,31 @@
+<script>
+
+function openNav() {
+  $(document).ready(function(){
+        $('#contenedorBotonMenuNavigationPane').toggle();
+        $('.openbtn').toggle();
+
+
+    });
+  document.getElementById("mySidebar").style.width = "180px";
+  // document.getElementById("contenedorBotonMenuNavigationPane").style.marginLeft = "0px";
+  // document.getElementById("contenedorBotonMenuNavigationPane").style.width = "0px";
+  document.getElementById("titulo").style.marginLeft = "180px";
+ 
+  
+}
+
+function closeNav() {
+  $(document).ready(function(){
+        $('#contenedorBotonMenuNavigationPane').toggle();
+        $('.openbtn').toggle();
+
+    });
+
+  document.getElementById("mySidebar").style.width = "0";
+  // document.getElementById("contenedorBotonMenuNavigationPane").style.marginLeft= "200px";
+  //   document.getElementById("contenedorBotonMenuNavigationPane").style.width = "45px";
+  document.getElementById("titulo").style.marginLeft = "0";
+
+}
+</script>

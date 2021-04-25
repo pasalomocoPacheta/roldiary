@@ -1,0 +1,3 @@
+Aquí van los modelos. Una clase por cada tabla o entidad de la base de datos.
+También puede haber modelos de consulta a la BD que contendrán consultas más complejas
+que estén relacionadas con una o varias entidades.

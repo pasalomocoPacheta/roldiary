@@ -1,0 +1,88 @@
+<script>
+// CÓDIGO PARA SACAR EL CAJÓN DE REGISTRO Y QUITAR TODO LO DEMÁS
+$(document).ready(function(){
+
+    $('.carousel-inner').carousel({
+        interval: 3000
+    })
+    
+    $(".registrar").on( "click", function() {
+    
+        if ($('#loguin-index').css('display') === "block")  {
+            $('#loguin-index').toggle();
+            $('#registrer-index').toggle();
+            $('html, body').animate({scrollTop: $("#loguin-index").offset().top}, 0);
+        } else if( $('#registrer-index').css('display') === "block"){
+
+            // $('html, body').animate({scrollTop: $("#registrer-index").offset().top}, 0);   
+        } else{
+            $('html, body').animate({scrollTop: $("#registrer-index").offset().top}, 0);   
+            $('#registrer-index').toggle();
+            $("#wrap").css("-webkit-filter", "blur(3px)");
+            $("#titulo").css("-webkit-filter", "blur(3px)");
+        }
+    
+    });
+
+    $(".entrar").on( "click", function() {
+
+        if ($('#registrer-index').css('display') === "block")  {
+            $('#registrer-index').toggle();
+            $('#loguin-index').toggle();
+
+        } else if ($('#loguin-index').css('display') === "block") {
+            // $('html, body').animate({scrollTop: $("#loguin-index").offset().top}, 0);
+        
+        } else {
+            $('html, body').animate({scrollTop: $("#loguin-index").offset().top}, 0);
+            $('#loguin-index').toggle();
+            $("#wrap").css("-webkit-filter", "blur(3px)");
+            $("#titulo").css("-webkit-filter", "blur(3px)");
+        }
+
+    });
+
+    
+    // Para que vaya a la vista de crear personaje una vez hace click en crear personaje
+    $("#crearPersonajeIndex").on( "click", function() {
+        var val = $(this).attr('name');
+        console.log(val); 
+        $.ajax({
+            url: "view/jquery/textPlanoDatosAjax.php?iniciar",
+            dataType: 'text',
+            data: {iniciar:val},
+            success: function(response){
+// Esto guarda la variable que le llega del nombre que le he asignado a la caja personajes en el value del
+// campo hidden iniciarView del formulario del login
+
+                $('#iniciarView').val(response);
+                // $('#response').text('iniciar: ' + response);
+            }
+        });
+
+    });
+ // Para que vaya a la vista de crear anécdota una vez hace click en crear anécdota
+    $("#crearAnecdotaIndex").on( "click", function() {
+        var val = $(this).attr('name');
+        console.log(val); 
+        $.ajax({
+            url: "view/jquery/textPlanoDatosAjax.php?iniciar",
+            dataType: 'text',
+            data: {iniciar:val},
+            success: function(response){
+                $('#iniciarView').val(response);
+                // $('#response').text('iniciar: ' + response);
+            }
+        });
+        // window.history.pushState("http://localhost/WEB/index.php", 
+        // "Iniciar anécdota", 
+        // "http://localhost/WEB/index.php?iniciar=anecdota");
+        // window.location.href = window.location.href;
+
+    });
+
+});
+
+
+
+</script>

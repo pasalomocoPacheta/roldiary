@@ -1,0 +1,20 @@
+<script>
+
+// SI ESTÁS EN PERSONAJES, APLICAR LA CLASE BOTONESBREADCRUMS PARA 
+// QUE CAMBIE EL ESTILO
+
+$(document).ready(function(){
+
+    var pathname = window.location.pathname;
+    if(pathname == "/WEB/personajes.php"){
+        $('#navPersonajes').addClass('botonesBreadCrums');
+    } else if (pathname == "/WEB/jugadores.php"){
+        $('#navJugadores').addClass('botonesBreadCrums');
+    } else if (pathname == "/WEB/anecdotas.php"){
+        $('#navAnecdotas').addClass('botonesBreadCrums');
+    }
+
+});
+
+
+</script>

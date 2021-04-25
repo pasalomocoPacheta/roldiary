@@ -1,0 +1,4 @@
+<?php
+    // ESTO RECOGE LOS DATOS ENVIADOS A TRAVÉS DE LA URL MEDIANTE AJAX AJAX 
+    echo $_GET["iniciar"];
+?>

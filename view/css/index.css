@@ -1,0 +1,66 @@
+/* Los cajones iniciales pasos uso, creacion personaje, anecdotas */
+
+.efectoCajaBoxShadow{
+    box-shadow: 0 20px 20px rgb(90 90 90 / 75%);
+}
+
+.marginTop{
+    margin-top: 20vh !important;
+}
+
+.efectoHover{
+    text-align: center;
+}
+
+.efectoHover:hover{
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+     text-decoration: underline;
+     cursor: pointer;
+}
+
+.show a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.card-body{
+    color:white !important;
+    font-size: x-large !important;
+}
+
+.dropdown-menu, .show {
+    background-color: transparent!important;
+}
+
+.dropdown-menu, .show a:hover {
+    background-color: transparent!important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent!important;
+}
+
+.margenIzquierdo{
+    margin-left: 65px;
+}
+
+/* El carrusel de imágenes   */
+
+#carouselIndex{
+    transition: transform 1s ease, opacity .5s ease-out;
+}
+
+/* Cajon del formulario de registro  */
+
+
+.imagen-circular {
+    border-radius: 50%;
+  }
+
+img{
+    border-radius: 4px;
+    
+}  

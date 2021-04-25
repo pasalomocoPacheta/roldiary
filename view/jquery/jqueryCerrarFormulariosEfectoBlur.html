@@ -1,0 +1,26 @@
+<script>
+$(".cerrarFormulariosyEfectoBlur").on( "click", function() {
+
+    if ($('#loguin-index').css('display') === "block")  {
+        $('#loguin-index').toggle();
+        $("#wrap").css("-webkit-filter", "blur(0px)");
+        $("#titulo").css("-webkit-filter", "blur(0px)");
+    } else if( $('#registrer-index').css('display') === "block"){
+        $('#registrer-index').toggle();
+        $("#wrap").css("-webkit-filter", "blur(0px)");
+        $("#titulo").css("-webkit-filter", "blur(0px)"); 
+    }
+
+    if ($('#formularioIncluirPersonaje').css('display') === "block")  {
+        console.log(34);
+        $('#formularioIncluirPersonaje').toggle();
+        $("#wrap").css("-webkit-filter", "blur(0px)");
+        $("#titulo").css("-webkit-filter", "blur(0px)");
+    } else if( $('#mostrandoPersonajes').css('display') === "block"){
+        $('#mostrandoPersonajes').toggle();
+        $("#wrap").css("-webkit-filter", "blur(0px)");
+        $("#titulo").css("-webkit-filter", "blur(0px)"); 
+    }
+       
+});
+</script>

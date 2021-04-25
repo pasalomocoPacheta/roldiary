@@ -1,0 +1,17 @@
+          echo"<div class='div-imagen'>";
+                            echo "<div>";
+                                echo "     Descripción de la foto que quieres que se muestre";  
+                                if($_SESSION['id_jugadores'] == $tablaPersonajes[$i]->fk_jugador_asociado){
+                                    echo " 
+                                            <a style='color:black' href='personajes.php?IDBorrarPersonaje=$id&NombrePersonaje=$nombrePersonaje'> 
+                                                <i class='fas fa-trash-alt'></i>	 
+                                            </a>
+                                        " ;  
+                                } else{
+                                    
+                                }
+                            echo "  </div>";
+                            echo "   <a href='view/img/subidasPorJugadores/personajes/$imagen'>";
+                            echo "     <img class='desvanecer' src='view/img/subidasPorJugadores/personajes/$imagen' />";
+                            echo "  </a>";
+                        echo "</div>";

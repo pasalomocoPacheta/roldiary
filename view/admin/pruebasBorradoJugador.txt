@@ -1,0 +1,57 @@
+
+
+
+<!-- 
+if(isset($_GET["Borrar"]) )
+            $borrarSeguro =  ControladorAdministrador::prompt();
+            echo $borrarSeguro;
+            // echo "
+            // <script>
+            // alert('ojete');
+            // var mensaje = prompt('¿ESTÁS SEGURO QUE DESEAS ELIMINAR ESTE JUGADOR? S/N');
+            // if (mensaje.toLowerCase() == 's') {
+            //     alert('Jugador eliminado');
+            //     window.history.pushState('admin.php', 'Admin', 'admin.php?BorrarSeguro=s');
+            // } else{
+            //     alert('Jugador no eliminado');
+            // </script>
+            // ";
+            // echo "<script type='text/javascript'>
+            // window.history.pushState('admin.php', 'Admin', 'admin.php?BorrarSeguro=$borrarSeguro');
+            // </script>
+            // ";
+            // echo "<script type='text/javascript'>
+            // window.history.pushState('admin.php', 'Admin', 'admin.php?BorrarSeguro=$borrarSeguro');
+            // </script>
+            // ";
+
+        }
+
+        // if($borrarSeguro == "s" || $borrarSeguro == "si" || $borrarSeguro == "SI" || $borrarSeguro == "S"){
+        //     $jugadores->deleteBy("nombre", $_GET["Borrar"]);
+        // } else{
+        //     echo "<script type=\'text/javascript\'>
+        //             alert('Jugador no eliminado');
+        //         </script>
+        //     ";
+        // }
+    
+
+    }
+
+    // public static function prompt(){
+
+    //     echo("<script type='text/javascript'> var answer = prompt('¿ESTÁS SEGURO QUE DESEAS ELIMINAR ESTE JUGADOR? S/N');  </script>");
+
+    //     $answer = "<script type='text/javascript'> document.write(answer); </script>";
+    //     if($answer == "s"){
+    //         return($answer);
+    //     } else{
+    //         return("Jugador no borrado");
+    //     }
+        
+    // }
+
+
+
+ -->

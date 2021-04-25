@@ -1,0 +1,74 @@
+<script>   
+
+     // CÓDIGO PARA SACAR MENÚ AÑADIR SESIONES DE JUEGO
+ $(document).ready(function(){
+ 
+     $("#botonIncluirPersonaje").on( "click", function() {
+ 
+        if ($('#formularioIncluirPersonaje').css('display') === "block")  {
+            
+            $('html, body').animate({scrollTop: $("#formularioIncluirPersonaje").offset().top}, 0);   
+        } else if( $('#mostrandoPersonajes').css('display') === "block"){
+            $('#formularioIncluirPersonaje').toggle();
+            $('#mostrandoPersonajes').toggle();
+            $('html, body').animate({scrollTop: $("#formularioIncluirPersonaje").offset().top}, 0);   
+        } else{
+            $('#formularioIncluirPersonaje').toggle();
+            $('html, body').animate({scrollTop: $("#formularioIncluirPersonaje").offset().top}, 0);   
+        }
+ 
+     });
+             
+     $("#botonMostrarPersonajes").on( "click", function() {
+ 
+        if ($('#mostrandoPersonajes').css('display') === "block")  {
+           
+            $('html, body').animate({scrollTop: $("#mostrandoPersonajes").offset().top}, 0);   
+        } else if( $('#formularioIncluirPersonaje').css('display') === "block"){
+            $('#formularioIncluirPersonaje').toggle();
+            $('#mostrandoPersonajes').toggle();
+            $('html, body').animate({scrollTop: $("#mostrandoPersonajes").offset().top}, 0);   
+       
+        } else{
+            $('#mostrandoPersonajes').toggle();
+            $('html, body').animate({scrollTop: $("#mostrandoPersonajes").offset().top}, 0);   
+        }
+    
+       });
+ 
+ 
+ 
+   });
+ 
+ </script>
+
+<!-- <script>   
+   
+   var navigationFn = {
+    goToSection: function(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top -$("#header").height() - 10 + 'px'
+        }, 0);
+    }
+}
+
+    // CÓDIGO PARA SACAR MENÚ AÑADIR SESIONES DE JUEGO
+$(document).ready(function(){
+
+    $("#botonIncluirPersonaje").on( "click", function() {
+
+    navigationFn.goToSection('#formularioIncluirPersonaje');
+
+    });
+            
+    $("#botonMostrarPersonajes").on( "click", function() {
+
+        navigationFn.goToSection('#mostrandoPersonajes');
+   
+      });
+
+
+
+  });
+
+</script> -->

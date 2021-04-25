@@ -1,0 +1,44 @@
+<header id="header" class="container cerrarFormulariosyEfectoBlur links-color menus-background navbar navbar-expand-lg">
+    <div id="titulo" class="row">
+      <div class="col-6">
+              <?php                         
+              if(isset($_SESSION['sess_user']) && $_SESSION['sess_user'] == "admin") { 
+                  echo "<a href='admin.php'> <img class='img-title' src='view/img/logoFINAL.png' > ROLDIARY</a> ";
+              } else{
+              echo "<a href='index.php'> <img class='img-title' src='view/img/logoFINAL.png' > ROLDIARY</a> ";
+              } 
+              ?>      
+      </div>
+      <div class="col-3">
+              <?php  if($_SESSION['sess_user'] == "admin") : ?>
+              <p class="text-center">&nbsp;Administrador <span style="font-size:x-large;"><?php echo $_SESSION['sess_user']; ?></span></p>
+              <?php endif; ?>
+              <?php  if(!($_SESSION['sess_user'] == "admin")) : ?>
+                  <p class="text-center">&nbsp;Jugador <span style="font-size:x-large;"><?php echo $_SESSION['sess_user'];
+                          if(isset( $_SESSION['nombrePersonajeSelecionado'])){
+                              echo "<small>, escribiendo como: <i>".$_SESSION['nombrePersonajeSelecionado']."</i> </small>";
+                          }  ?></span></p>
+              <?php endif; ?>
+      </div>
+      <div class="col-3">
+        
+      <?php 
+          if(isset($_SESSION['id_jugadores'])){
+              echo "
+                  <span class='navbar-brand text-right'> 
+                      <button style='cursor:auto;'>
+                      <a href='index.php?cerrar=sesion'> <img src='view/img/logout_icon.png' >SALIR</a>
+                      </button>
+                  </span>";
+          }else{
+              echo "
+              <span class='navbar-brand text-right'> 
+                      <button class='entrar'> <i class='fas fa-sign-in-alt'></i> Entrar </button> 
+                      <button class='registrar'>Registrarse</button>
+              </span>";
+          }
+      ?>  
+  
+      </div>
+    </div>
+  </header>

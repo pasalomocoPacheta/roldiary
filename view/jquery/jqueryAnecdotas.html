@@ -1,0 +1,43 @@
+<script>  
+
+var navigationFn = {
+    goToSection: function(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top -$("#header").height() - 10 + 'px'
+        }, 0);
+    }
+}
+
+    // CÓDIGO PARA SACAR MENÚ AÑADIR SESIONES DE JUEGO
+$(document).ready(function(){
+
+    $("#botonIncluirAnecdota").on( "click", function() {
+
+    navigationFn.goToSection('#formularioIncluirAnecdota');
+
+    });
+            
+    $("#botonMostrarAnecdotasJugadorSesion").on( "click", function() {
+
+        navigationFn.goToSection('#mostrandoAnecdotasJugadorSesion');
+   
+      });
+
+      $("#botonMostrarAnecdotasTodosJugadores").on( "click", function() {
+
+        navigationFn.goToSection('#mostrandoAnecdotasTodosJugadores');
+    
+    });
+
+
+  });
+
+
+</script>
+
+<!-- // window.location.hash = '#mostrandoAnecdotasTodosJugadores';               
+// var $el = $('#mostrandoAnecdotasTodosJugadores');  //record the elem so you don't crawl the DOM everytime  
+// var posicion = $el.position().top + $el.offset().top + $el.outerHeight(true);
+// $("html, body").animate({ scrollTop: $("#myID").scrollTop() }, 1000);
+// $('#mostrandoAnecdotasTodosJugadores').scrollTop($('#mostrandoAnecdotasTodosJugadores')[0].scrollHeight);
+// $("#mostrandoAnecdotasTodosJugadores").animate({ scrollTop: $('#mostrandoAnecdotasTodosJugadores').prop("scrollHeight")}, 1000); -->
